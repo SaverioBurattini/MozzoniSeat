@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MozzoniSeat</title>
+
+    <link rel="shortcut icon" href="./img/logo-ridotto.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/homepage.css">
+
+</head>
+
+
+
+<body data-bs-theme="dark">
+    
+    <div class="container">
+        <div class="col-md-10 col-lg-10 w-100">
+            
+            <!-- ----------------------------- Hero cover ------------------------------ -->
+            <div class="hero-section">
+                <header data-no-searchbar></header> <!-- (Component) -->
+                
+                <div class="hero-text">
+                    <h1>Pronto per il prossimo spettacolo?</h1>
+                    <h4>La notte migliore della tua vita ti sta aspettando.</h4>
+                    <h4>E noi abbiamo i biglietti.</h4>
+                </div>
+                
+                <!-- Barra di ricerca -->
+                <div class="searchbar input-group mb-3 mx-auto">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-default"
+                        placeholder="Quale evento vuoi vedere dal vivo?">
+                    </div>
+                    <!-- Barra di ricerca -->
+                    
+                </div>
+                
+                
+                
+                <!-- ------------------------------- Sliders ------------------------------- -->
+                <h1 class="titolo-categoria">Categorie</h1>
+                <div class="containerSwiper mb-5 ">
+                    <!-- Swiper -->
+                    <div class="swiper swiper-homepage">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="categorie.html#Concerti"><img src="./img/categories-thumbnails/1.png" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="categorie.html#Cinema"><img src="./img/categories-thumbnails/2.png" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="categorie.html#Teatro"><img src="./img/categories-thumbnails/3.png" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="categorie.html#Sport"><img src="./img/categories-thumbnails/4.png" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="categorie.html#Mostre"><img src="./img/categories-thumbnails/5.png" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="categorie.html#Circo"><img src="./img/categories-thumbnails/6.png" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                            <a href="categorie.html#Sagre"><img src="./img/categories-thumbnails/7.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="categorie.html#Parchi"><img src="./img/categories-thumbnails/8.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="categorie.html#Stand"><img src="./img/categories-thumbnails/9.png" alt=""></a>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+                <h1 class="titolo-categoria">Eventi in evidenza</h1>
+                <div class="swiper-container mb-5 ">
+                    
+                    </div>
+
+                
+                
+            </div>
+            
+            
+        </div>
+    </div> <!-- (Fine div.container) -->
+    
+    
+    <footer></footer> <!-- (Component) -->
+    
+            <div id="mobile-navbar"></div> <!-- (Component) -->
+            <div id="sign-in-up-modal"></div> <!-- (Component) -->
+            
+
+            
+            
+            
+            
+            <!-- ----------------------------- Components ------------------------------ -->
+            <script src="./components/header.js"></script>
+            <script src="./components/footer.js"></script>
+            
+            <!-- ------------------------------ Swiper.js ------------------------------ -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            
+            <!-- ------------------------------ Bootstrap ------------------------------ -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+            
+            <!-- ---------------------------- Swipers init ----------------------------- -->
+            <script src="./js/swiper-init.js"></script>
+            
+            
+            <script src="./js/auth.js"></script>
+            <script src="./js/searchbar-placeholder-mediaquery.js"></script>
+
+            <!-- ------------------------------ NProgress ------------------------------ -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+            <script src="./js/NProgress-init.js"></script>
+
+            <script src="./js/card-eventi-homepage.js"></script>
+
+        </body>
+        
+        </html>

@@ -1,0 +1,19 @@
+@import "_global.css";
+@import "_searchbar-header.css";
+
+.info-evento {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    transform: scale();
+}
+
+.info-evento h2 {
+    font-weight: 700;
+}
+
+.info-evento .data-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+@import "_global.css";
+@import "_searchbar-header.css";
+@import "_card-eventi.css";
+
+.hero-section {
+    background-image: url('../img/hero/categorie/hero-lista-eventi.png') !important;
+    background-position: center;
+    
+    -webkit-box-shadow: inset 0px 0px 50px 10px #000000; 
+    box-shadow: inset 0px 0px 50px 10px #000000;
+}

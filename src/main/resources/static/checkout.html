@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MozzoniSeatAltraPagina</title>
+
+    <link rel="shortcut icon" href="./img/logo-ridotto.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+
+
+
+<body data-bs-theme="dark">
+
+    <div class="container">
+        <div class="col-md-10 col-lg-10 w-100">
+
+            
+
+            <!-- ----------------------------- Hero cover ------------------------------ -->
+                 <div class="hero-section" style="background-image: url(./img/carrello-background.jpg);">
+                    
+                    <div class="overlay"></div>
+                <header data-no-searchbar></header> <!-- (Component) -->
+                <div class="container-checkout d-flex">
+                    <form class="row g-3 needs-validation" novalidate action="#!">
+                        <div class="col-md-6">
+                            <label for="validationCustom01" class="form-label">Nome</label>
+                            <input type="text" class="form-control richiesti" id="validationCustom01" placeholder="Nome"
+                                aria-label="Nome" maxLength="58"  required>
+                            <div class="invalid-feedback">
+                                Nome richiesto
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">Cognome</label>
+                            <input type="text" class="form-control richiesti" id="validationCustom02" placeholder="Cognome"
+                                aria-label="Cognome" maxLength="40" required>
+                            <div class="invalid-feedback">
+                                Cognome richiesto
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom03" class="form-label">Indirizzo</label>
+                            <input type="text" class="form-control richiesti" id="validationCustom03" placeholder="Via Roma, 123"
+                            maxLength="40" required>
+                            <div class="invalid-feedback">
+                                Indirizzo richiesto
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom04" class="form-label">Città</label>
+                            <input type="text" class="form-control richiesti" id="validationCustom04" placeholder="Roma" maxLength="58" required>
+                            <div class="invalid-feedback">
+                                Città richiesta
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom05" class="form-label">Stato</label>
+                            <select id="validationCustom05" class="form-select" required>
+                                <option selected disabled value>Scegli...</option>
+                                <option>Italia</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Stato richiesto
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom06" class="form-label">CAP</label>
+                            <input type="text" class="form-control richiesti" id="validationCustom06" placeholder="00139" maxLength="5" required>
+                            <div class="invalid-feedback">
+                                CAP richiesto
+                            </div>
+                        </div>
+                    
+                        <div class="row gy-3">
+                            <div class="col-md-6">
+                                <label for="validationCustom07" class="form-label">Titolare della carta</label>
+                                <input type="text" class="form-control richiesti" id="validationCustom07" placeholder="Nome Cognome"
+                                maxLength="50"  required>
+                                <small class="text-muted">Nome completo del titolare della carta</small>
+                                <div class="invalid-feedback">
+                                    Nome titolare carta richiesto
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-6">
+                                <label for="validationCustom08" class="form-label">Numero della carta</label>
+                                <input type="text" class="form-control richiesti" id="validationCustom08" placeholder="Numero della carta" maxLength="16" required>
+                                <div class="invalid-feedback">
+                                    Numero della carta richiesto
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-3">
+                                <label for="validationCustom09" class="form-label">Scadenza</label>
+                                <input type="text" class="form-control richiesti" id="validationCustom09" placeholder="MM/YYYY"
+                                maxLength="7" required>
+                                <div class="invalid-feedback">
+                                    Data di scadenza richiesta
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-3">
+                                <label for="validationCustom10" class="form-label">CVV</label>
+                                <input type="text" class="form-control richiesti" id="validationCustom10" placeholder="***" maxLength="3" required>
+                                <div class="invalid-feedback">
+                                    CVV richiesto
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-12">
+                                <button type="button" class="btn-login" data-bs-toggle="modal"
+                                data-bs-target="#mobileSerchbar">
+                                Paga
+                            </button>                                                                  
+                        
+                        </div>
+                    </form>
+                    </div>
+
+
+                <header id="checkout" ></header>
+            </div>
+            
+        </div>
+
+        
+        
+    </div> <!-- (Fine div.container) -->
+
+
+
+
+    <div class="modal fade" id="mobileSerchbar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Grazie per aver acquistato!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <a href="">Vai ai tuoi biglietti</a> <!-- TODO Da modificare -->
+        </div>
+        </div>
+        </div>
+    </div>
+    
+    <footer></footer> <!-- (Component) -->
+
+    <div id="mobile-navbar"></div> <!-- (Component) -->
+    <div id="sign-in-up-modal"></div> <!-- (Component) -->
+    <div id="search-modal"></div> <!-- (Component) -->
+
+
+
+
+
+
+    <!-- ----------------------------- Components ------------------------------ -->
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+    <!-- ------------------------------ Swiper.js ------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ------------------------------ Bootstrap ------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- ---------------------------- Swipers init ----------------------------- -->
+    <script src="./js/swiper-init.js"></script>
+    
+    <script src="./js/auth.js"></script>
+
+    <!-- ------------------------------ NProgress ------------------------------ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="./js/NProgress-init.js"></script>
+    
+</body>
+
+</html>

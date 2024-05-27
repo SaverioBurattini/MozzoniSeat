@@ -1,0 +1,44 @@
+/* -------------------------------------------------------------------------- */
+/*                                searchbar                                   */
+/* -------------------------------------------------------------------------- */
+
+.searchbar {
+    width: 50vw;
+    height: 60px;
+}
+
+.searchbar input::placeholder {
+    color: rgb(224, 219, 219) !important;
+    font-weight: 550;
+}
+
+.searchbar * {
+    background: #9924168e;
+    color: rgb(224, 219, 219) !important;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    border-radius: 3rem;
+}
+.searchbar input:focus,
+.searchbar:focus-within .input-group-text { /* -within per selezionare l'elemento precedente, ovvero .input-group-text */
+    background-color: #ac1c0ca1;
+    box-shadow: none;
+}
+
+.input-group-text {
+    transform: translateX(-1px); /* Altrimenti i due contenitori si accavallano creando una linea verticale tra i due */
+}
+
+#inputGroup-sizing-default {
+    padding: 0;
+}
+.fa-magnifying-glass {
+    padding: 0 0 0 1.2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .form-control {
+        padding-left: 0.8rem !important;
+    }
+}

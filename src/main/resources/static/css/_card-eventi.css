@@ -1,0 +1,89 @@
+.titolo-categoria {
+    text-align: center;
+    margin: 6rem 0 2rem 0;
+    text-decoration-color: rgba(228, 60, 60, 0.568);
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 10px;
+    color: var(--text-color);
+    padding: 1rem
+}
+
+.swiper-slide {
+    background-color: transparent;
+}
+
+.swiper-slide-evento {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+.swiper-slide-evento::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-image: var(--background-image); /* La variabile --background-image viene creata dinamicamente alla creazione delle card degli eventi con JavaScript */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(1.5rem) brightness(60%);
+    z-index: -1; /* Lo pseudo-elemento dev'essere dietro il contenuto */
+}
+
+.swiper-slide-evento img {
+    position: relative;
+    border-radius: 1rem;
+    z-index: 1; /* L'immagine dev'essere sopra lo sfondo */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%; /* Rende l'immagine fluida ed evita problemi di ridimensionamento dello slider */
+}
+
+.swiper-slide-evento-infocontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-left-radius: 0rem;
+    padding: 2rem;
+    height: 220px;
+    border-bottom-right-radius: 5rem;
+    position: relative;
+    z-index: 1; /* Il container dev'essere sopra lo sfondo */
+}
+
+.swiper-slide-evento-infocontainer h4 {
+    font-weight: 650;
+}
+
+.swiper-slide-evento-infocontainer p {
+    margin: 0;
+}
+
+.swiper-slide-evento-infocontainer .slide-event-venue a {
+    color: inherit;
+    text-wrap: nowrap;
+}
+
+
+.swiper-slide-evento-infocontainer .btn {
+    background-color: var(--primary);
+    opacity: 0.95;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 2rem;
+    transition: all 0.15s ease-in-out;
+    margin-top: 1rem;
+}
+.swiper-slide-evento-infocontainer .btn:hover {
+    opacity: 0.5;
+    transform: scale(1.04);
+}
+.swiper-slide-evento-infocontainer .btn:active {
+    background-color: color-mix(in srgb, var(--primary), transparent 40%)
+}
