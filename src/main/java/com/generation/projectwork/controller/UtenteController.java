@@ -94,7 +94,7 @@ public class UtenteController {
 	
 	
 	
-	@PostMapping("/nuovoUtente")
+	@PostMapping
 	public ResponseEntity<?> AddOrUpdateUser(@RequestBody UtenteDTO utenteDTO) {
 		UtenteEntity utente = utenteDTO.toPersonas();
 //		boolean esisteGia = utenteService.findByEmailAndPassExists(utente.getEmail(), utente.getPassword());
@@ -105,7 +105,7 @@ public class UtenteController {
 			return new ResponseEntity<UtenteEntity>(utenteCreato, HttpStatus.OK);
 	}
 	
-	@DeleteMapping("{utente_id}")
+	@DeleteMapping("/{utente_id}")
 	@Transactional
 	public ResponseEntity<?> DeleteUser(@PathVariable("utente_id")int id) {
 		try {
@@ -129,10 +129,10 @@ public class UtenteController {
 			return new ResponseEntity<UtenteDTO>(utente, HttpStatus.BAD_REQUEST);
 		}
 			UtenteEntity persona = utente.toPersonaDto(utente);
-			boolean esisteGia = utenteService.findByEmailAndPassExists(persona.getEmail(), persona.getPassword());
-			if(esisteGia) {
-				return new ResponseEntity<UtenteDTO>(utente, HttpStatus.BAD_REQUEST);
-			}
+			// boolean esisteGia = utenteService.findByEmailAndPassExists(persona.getEmail(), persona.getPassword());
+			// if(esisteGia) {
+			// 	return new ResponseEntity<UtenteDTO>(utente, HttpStatus.BAD_REQUEST);
+			// }
 				UtenteEntity utenteCreato = utenteService.addOrUpdate(persona);
 				return new ResponseEntity<UtenteEntity>(utenteCreato, HttpStatus.OK);
 			
