@@ -11,6 +11,8 @@ let coordinate = document.getElementById("coordinate");
 let prezzoIntero = document.getElementById("prezzoIntero");
 let prezzoRidotto= document.getElementById("prezzoRidotto");
 let categoria = document.getElementById("categoriaID");
+let caricaProdotti = document.getElementById("caricaProdotti");
+let link = document.getElementsByClassName("link");
 
 let bottoneNuovoEvento = document.querySelector(".btn-eventoPubblica");
 
@@ -272,5 +274,5 @@ function modificaEvento(oggettoEventoModificato) {
                   
                       })
             }
-        
-  // )};
+
+ 

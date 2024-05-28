@@ -14,18 +14,20 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="comandi" >
-            <button>Gestisci Eventi</button>
-            <button>Gestisci Utenti</button>
-            <button>Gestisci Categorie</button>
-        </div>
+  <div class="container">
 
         <div class="liste">
+          <div class="amici">
             <h1>Lista Eventi</h1>
-            <button type="button" class="btnNuovoEvento fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a href="index.html">
+              <button class="home fa-solid fa-home">
+              </button>
+            </a>
+          </div>
+            <button type="button" class="btnNuovoUtente fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Aggiungi Evento
               </button>
+          </div>
 
       
 
@@ -50,7 +52,7 @@
         </tbody>
     </table>
 </div>
-    </div>
+    
 
       
       <!-- Modal -->
@@ -71,67 +73,67 @@
           </div>
         </div>
       </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi Evento</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <form action="" id="modal-registrazione">
-                                  <div class="form-group">
-                                      <label class="nome" for="nome">Nome</label>
-                                      <input id="nome" type="text" placeholder="Nome">
-                                  </div>
-                                  <div class="form-group">
-                                      <label class="locandina" for="locandina">Locandina</label>
-                                      <input id="locandina" type="file" placeholder="Locandina">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="Descrizione Evento">Descrizione</label>
-                                      <input id="descrizione" type="text" placeholder="Descrizione">
-                                  </div>
-                                  <div class="form-group">
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi Evento</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="" id="modal-registrazione">
+                <div class="form-group">
+                  <label class="nome" for="nome">Nome</label>
+                  <input id="nome" type="text" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                  <label class="locandina" for="locandina">Locandina</label>
+                  <input id="locandina" type="file" placeholder="Locandina">
+                </div>
+                <div class="form-group">
+                  <label for="Descrizione Evento">Descrizione</label>
+                  <input id="descrizione" type="text" placeholder="Descrizione">
+                </div>
+                <div class="form-group">
                                       <label for="DataEvento">Data</label>
                                       <input id="data" type="date" placeholder="Data">
-                                  </div>
-                                  <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
                                       <label for="Localita">Località</label>
                                       <input id="localita" type="text" placeholder="Località">
-                                  </div>
-                                  <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
                                       <label for="Coordinate">Coordinate</label>
                                       <input id="coordinate" type="text" placeholder="Coordinate">
-                                  </div>
-                                  <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
                                       <label for="prezzoIntero">Prezzo Intero</label>
                                       <input id="prezzoIntero" type="number" step=".01" placeholder="PrezzoIntero">
-                                  </div>
-                                  <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
                                       <label for="prezzoRidotto">Prezzo Ridotto</label>
                                       <input id="prezzoRidotto" type="number" step=".01" placeholder="PrezzoRidotto">
-                                  </div>
-                                  <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
                                       <label for="categoria">Categoria Evento</label>
                                       <input id="categoriaID" type="number" placeholder="Categoria Evento">
-                                  </div>
-                                
-                                  <div class="div-btn-auth"><button class="btn-eventoPubblica btn-auth">Inserisci Evento</button></div>
-                              </form>
-                          </div>
+                                    </div>
+                                  
+                                    <div class="div-btn-auth"><button class="btn-eventoPubblica btn-auth">Inserisci Evento</button></div>
+                                  </form>
+                              </div>
                         </div>
                       </div>
                     </div>
-              </div>
+                  </div>
+                  
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <script src="js/gestionale/gestionale-eventi.js"></script>
-</body>
+                  
+                  
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+                  
+                  <script src="js/gestionale/gestionale-eventi.js"></script>
+                </body>
 </html>

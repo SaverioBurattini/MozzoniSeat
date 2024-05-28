@@ -22,104 +22,222 @@
             <!-- ----------------------------- Hero cover ------------------------------ -->
                  <div class="hero-section" style="background-image: url(./img/carrello-background.jpg);">
                     
-                    <div class="overlay"></div>
+                  
                 <header data-no-searchbar></header> <!-- (Component) -->
-                <div class="container-checkout d-flex">
-                    <form class="row g-3 needs-validation" novalidate action="#!">
-                        <div class="col-md-6">
-                            <label for="validationCustom01" class="form-label">Nome</label>
-                            <input type="text" class="form-control richiesti" id="validationCustom01" placeholder="Nome"
-                                aria-label="Nome" maxLength="58"  required>
-                            <div class="invalid-feedback">
-                                Nome richiesto
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom02" class="form-label">Cognome</label>
-                            <input type="text" class="form-control richiesti" id="validationCustom02" placeholder="Cognome"
-                                aria-label="Cognome" maxLength="40" required>
-                            <div class="invalid-feedback">
-                                Cognome richiesto
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <label for="validationCustom03" class="form-label">Indirizzo</label>
-                            <input type="text" class="form-control richiesti" id="validationCustom03" placeholder="Via Roma, 123"
-                            maxLength="40" required>
-                            <div class="invalid-feedback">
-                                Indirizzo richiesto
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom04" class="form-label">Città</label>
-                            <input type="text" class="form-control richiesti" id="validationCustom04" placeholder="Roma" maxLength="58" required>
-                            <div class="invalid-feedback">
-                                Città richiesta
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="validationCustom05" class="form-label">Stato</label>
-                            <select id="validationCustom05" class="form-select" required>
-                                <option selected disabled value>Scegli...</option>
-                                <option>Italia</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Stato richiesto
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="validationCustom06" class="form-label">CAP</label>
-                            <input type="text" class="form-control richiesti" id="validationCustom06" placeholder="00139" maxLength="5" required>
-                            <div class="invalid-feedback">
-                                CAP richiesto
-                            </div>
-                        </div>
-                    
-                        <div class="row gy-3">
-                            <div class="col-md-6">
-                                <label for="validationCustom07" class="form-label">Titolare della carta</label>
-                                <input type="text" class="form-control richiesti" id="validationCustom07" placeholder="Nome Cognome"
-                                maxLength="50"  required>
-                                <small class="text-muted">Nome completo del titolare della carta</small>
-                                <div class="invalid-feedback">
-                                    Nome titolare carta richiesto
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-6">
-                                <label for="validationCustom08" class="form-label">Numero della carta</label>
-                                <input type="text" class="form-control richiesti" id="validationCustom08" placeholder="Numero della carta" maxLength="16" required>
-                                <div class="invalid-feedback">
-                                    Numero della carta richiesto
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-3">
-                                <label for="validationCustom09" class="form-label">Scadenza</label>
-                                <input type="text" class="form-control richiesti" id="validationCustom09" placeholder="MM/YYYY"
-                                maxLength="7" required>
-                                <div class="invalid-feedback">
-                                    Data di scadenza richiesta
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-3">
-                                <label for="validationCustom10" class="form-label">CVV</label>
-                                <input type="text" class="form-control richiesti" id="validationCustom10" placeholder="***" maxLength="3" required>
-                                <div class="invalid-feedback">
-                                    CVV richiesto
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-12">
-                                <button type="button" class="btn-login" data-bs-toggle="modal"
-                                data-bs-target="#mobileSerchbar">
-                                Paga
-                            </button>                                                                  
-                        
-                        </div>
-                    </form>
+                <div class="padre d-lg-flex container-lg gap-5">
+                  <div class="container-fluid">
+              
+               
+                    <div class="row">
+                      <div class="col-8">
+                        <h1 class="text-white">Il tuo carrello</h1>
+                      </div>
+                      <div class="col-4  d-flex align-items-end justify-content-end ">
+                        <p class="text-secondary">3 Items</p>
+                      </div>
                     </div>
+              
+               
+                    <div class="row prodotto">
+                      <div class="col-12 col-lg-3 div-image">
+                        <img src="imgs/img/strokes.jpg" alt="">
+                      </div>
+                      <div class="col-8 col-lg-3">
+                        <p class="text-secondary">Vinile</p>
+                        <p class="text-white">The New Abnormal</p>
+                      </div>
+                      <div class="col-2 col-lg-3 numeri">
+                        <label for=""></label>
+                        <p class="text-primary">-</p>
+                        <input type="number" value="1">
+                        <p class="text-primary">+</p>
+                      </div>
+                      <div class="col-12 col-lg-3">
+                        <p class="text-white sinistra">€ 20.00</p>
+                      </div>
+                    </div>
+              
+                 
+                    <div class="row prodotto">
+                      <div class="col-12 col-lg-3 div-image">
+                        <img src="imgs/img/alicia.jpg" alt="">
+                      </div>
+                      <div class="col-8 col-lg-3">
+                        <p class="text-secondary">Vinile</p>
+                        <p class="text-white">Alicia</p>
+                      </div>
+                      <div class="col-2 col-lg-3 numeri">
+                        <label for=""></label>
+                        <p class="text-primary">-</p>
+                        <input type="number" value="1">
+                        <p class="text-primary">+</p>
+                      </div>
+                      <div class="col-12 col-lg-3">
+                        <p class="text-white sinistra">€ 20.00</p>
+                      </div>
+                    </div>
+              
+              
+                    <div class="row prodotto">
+                      <div class="col-12 col-lg-3 div-image">
+                        <img src="imgs/img/radiohead.jpg" alt="">
+                      </div>
+                      <div class="col-8 col-lg-3">
+                        <p class="text-secondary">CD Audio</p>
+                        <p class="text-white">OK Computer</p>
+                      </div>
+                      <div class="col-2 col-lg-3 numeri">
+                        <label for=""></label>
+                        <p class="text-primary">-</p>
+                        <input type="number" value="1">
+                        <p class="text-primary">+</p>
+                      </div>
+                      <div class="col-12 col-lg-3">
+                        <p class="text-white sinistra">€ 20.00</p>
+                      </div>
+                    </div>
+              
+                  </div>
+              
+                
+                  <div class="container">
+                    <h1 class="riepilogo mb-4">Riepilo ordine</h1>
+              
+                    <div class="row rigaAlta">
+                      <div class="d-flex justify-content-between my-2">
+                        <p>OGGETTI: <span class="bg-primary px-2">3</span></p>
+                        <p>€ 150.17</p>
+                      </div>
+                      <form action="" class="d-flex flex-column">
+                        <label for="">SPEDIZIONE</label>
+                        <select name="" id="">
+                          <option value="">Spedizione standard- €5.00</option>
+                        </select>
+                        <label for="" class="spazioAlto">Codice Sconto</label>
+                        <input type="text" class="spazietto">
+                        <p class="bordino">Inserisci codice</p>
+                      </form>
+                      <div class="d-flex justify-content-between">
+                        <p>TOTALE</p>
+                        <p>€ 450.50</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Compra
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="container-checkout d-flex">
+                                <form class="row g-3 needs-validation" novalidate action="#!">
+                                <div class="col-md-6">
+                                    <label for="validationCustom01" class="form-label">Nome</label>
+                                    <input type="text" class="form-control richiesti" id="validationCustom01" placeholder="Nome"
+                                        aria-label="Nome" maxLength="58"  required>
+                                    <div class="invalid-feedback">
+                                        Nome richiesto
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationCustom02" class="form-label">Cognome</label>
+                                    <input type="text" class="form-control richiesti" id="validationCustom02" placeholder="Cognome"
+                                        aria-label="Cognome" maxLength="40" required>
+                                    <div class="invalid-feedback">
+                                        Cognome richiesto
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="validationCustom03" class="form-label">Indirizzo</label>
+                                    <input type="text" class="form-control richiesti" id="validationCustom03" placeholder="Via Roma, 123"
+                                    maxLength="40" required>
+                                    <div class="invalid-feedback">
+                                        Indirizzo richiesto
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationCustom04" class="form-label">Città</label>
+                                    <input type="text" class="form-control richiesti" id="validationCustom04" placeholder="Roma" maxLength="58" required>
+                                    <div class="invalid-feedback">
+                                        Città richiesta
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationCustom05" class="form-label">Stato</label>
+                                    <select id="validationCustom05" class="form-select" required>
+                                        <option selected disabled value>Scegli...</option>
+                                        <option>Italia</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Stato richiesto
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom06" class="form-label">CAP</label>
+                                    <input type="text" class="form-control richiesti" id="validationCustom06" placeholder="00139" maxLength="5" required>
+                                    <div class="invalid-feedback">
+                                        CAP richiesto
+                                    </div>
+                                </div>
+                                
+                                <div class="row gy-3">
+                                    <div class="col-md-6">
+                                        <label for="validationCustom07" class="form-label">Titolare della carta</label>
+                                        <input type="text" class="form-control richiesti" id="validationCustom07" placeholder="Nome Cognome"
+                                        maxLength="50"  required>
+                                        <small class="text-muted">Nome completo del titolare della carta</small>
+                                        <div class="invalid-feedback">
+                                            Nome titolare carta richiesto
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-6">
+                                        <label for="validationCustom08" class="form-label">Numero della carta</label>
+                                        <input type="text" class="form-control richiesti" id="validationCustom08" placeholder="Numero della carta" maxLength="16" required>
+                                        <div class="invalid-feedback">
+                                            Numero della carta richiesto
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-3">
+                                        <label for="validationCustom09" class="form-label">Scadenza</label>
+                                        <input type="text" class="form-control richiesti" id="validationCustom09" placeholder="MM/YYYY"
+                                        maxLength="7" required>
+                                        <div class="invalid-feedback">
+                                            Data di scadenza richiesta
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-3">
+                                        <label for="validationCustom10" class="form-label">CVV</label>
+                                        <input type="text" class="form-control richiesti" id="validationCustom10" placeholder="***" maxLength="3" required>
+                                        <div class="invalid-feedback">
+                                            CVV richiesto
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-12">
+                                        <button type="button" class="btn-login" data-bs-toggle="modal"
+                                        data-bs-target="#mobileSerchbar">
+                                        Paga
+                                    </button>                                                                  
+                                
+                                </div>
+                                </form>
+                                </div>
+                            </div>
+                         
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
                 <header id="checkout" ></header>

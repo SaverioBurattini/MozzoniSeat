@@ -3,11 +3,6 @@ let bodyTabella = document.querySelector("#bodyTabella");
 let errore = document.querySelector(".errore");
 
 let nome = document.getElementById("nome");
-let cognome = document.getElementById("cognome");
-let data = document.getElementById("data");
-let email = document.getElementById("email");
-let password = document.getElementById("password");
-let ruolo = document.getElementById("ruolo");
 
 let bottoneNuovoUtente = document.querySelector(".btn-utentePubblica");
 
@@ -17,42 +12,36 @@ let bottoneConfermaEliminazione = document.getElementById('bottoneConfermaElimin
 let spanUtenteDaEliminare = document.getElementById("spanUtenteDaEliminare");
 
 let utenteSelezionato = "";
-let arrayUtenti = [];
+let arrayCategorie = [];
 
-async function getAllUtenti() {
+async function getAllCategorie() {
     try {
-        const response = await fetch("http://localhost:8080/api/utenti/tuttiGliUtenti");
-        const utenti = await response.json();
-        arrayUtenti = utenti;
-        console.log(arrayUtenti);
-        tuttiGliUtenti();
+        const response = await fetch("http://localhost:8080/api/categoria/tutteCategorie");
+        const categorie = await response.json();
+        arrayCategorie = categorie;
+        console.log(arrayCategorie);
+        tutteLeCategorie();
     } catch (error) {
         console.error("Error fetching users:", error);
     }
 }
 
 
-function tuttiGliUtenti() {
+function tutteLeCategorie() {
     let fragment = document.createDocumentFragment();
-    
-    arrayUtenti.forEach((utente) => {
-        let utenteRecord = document.createElement("tr");
+    arrayCategorie.forEach((categoria) => {
+        let categoriaRecord = document.createElement("tr");
         let inserisciInTabella = `
-        <td class="idUtente">${utente.utente_id}</td>
-        <td class="nome" data-utenteId="${utente.utente_id}" >${utente.nome}</td>
-        <td class="cognome" data-utenteId="${utente.utente_id}">${utente.cognome}</td>
-        <td class="data" data-utenteId="${utente.utente_id}">${utente.data}</td>
-        <td class="email" data-utenteId="${utente.utente_id}">${utente.email}</td>
-        <td class="password" data-utenteId="${utente.utente_id}">${utente.password}</td>
-        <td class="ruolo" data-utenteId="${utente.utente_id}">${utente.ruolo}</td>
+        <td class="idUtente">${categoria.id}</td>
+        <td class="nome" data-utenteId="${categoria.id}" >${categoria.nome}</td>
         <td>
-        <button class="bottoneModifica fa-solid fa-pen btn btn-primary" data-utenteId="${utente.utente_id}"></button>
-        <button data-bs-toggle="modal" data-bs-target="#modalConfermaEliminazione" class="btnApriModalEliminazione fa-solid fa-trash btn btn-danger" data-utenteId="${utente.utente_id}"></button>  
+        <button class="bottoneModifica fa-solid fa-pen btn btn-primary" data-utenteId="${categoria.id}"></button>
+        <button data-bs-toggle="modal" data-bs-target="#modalConfermaEliminazione" class="btnApriModalEliminazione fa-solid fa-trash btn btn-danger" data-utenteId="${categoria.id}"></button>  
         </td>
         `;
         
-        utenteRecord.innerHTML = inserisciInTabella;
-        fragment.appendChild(utenteRecord);
+        categoriaRecord.innerHTML = inserisciInTabella;
+        fragment.appendChild(categoriaRecord);
     });
     
     bodyTabella.appendChild(fragment);
@@ -63,9 +52,9 @@ function tuttiGliUtenti() {
     
     document.querySelectorAll(".btnApriModalEliminazione").forEach(btn => {
         btn.addEventListener("click", () => {
-            let utente = arrayUtenti.find(utente => utente.utente_id == btn.getAttribute("data-utenteId"));
-            if (utente) {
-                spanUtenteDaEliminare.textContent = utente.nome;
+            let categoria = arrayCategorie.find(categoria => categoria.id == btn.getAttribute("data-utenteId"));
+            if (categoria) {
+                spanUtenteDaEliminare.textContent = categoria.nome;
                 utenteSelezionato = btn.getAttribute("data-utenteId");
             }
         });
@@ -86,25 +75,14 @@ async function toggleEdit(btn) {
     
     if(btn.classList.contains("fa-floppy-disk")) {
         let nomeUtenteSelezionato = document.querySelector(`.nome[data-utenteId="${userId}"]`);
-        let cognomeUtenteSelezionato= document.querySelector(`.cognome[data-utenteId="${userId}"]`);
-        let dataUtenteSelezionato = document.querySelector(`.data[data-utenteId="${userId}"]`);
-        let emailUtenteSelezionato = document.querySelector(`.email[data-utenteId="${userId}"]`);
-        let passwordUtenteSelezionato = document.querySelector(`.password[data-utenteId="${userId}"]`);
-        let ruoloUtenteSelezionato = document.querySelector(`.ruolo[data-utenteId="${userId}"]`);
+
         
-        
-        
-        const oggettoUtenteModificato = new UtentePUT (
+        const oggettoCategoriaModificato = new categoriaPUT (
             Number(userId),
-            nomeUtenteSelezionato.textContent,
-            cognomeUtenteSelezionato.textContent,
-            dataUtenteSelezionato.textContent,
-            emailUtenteSelezionato.textContent,
-            passwordUtenteSelezionato.textContent,
-            ruoloUtenteSelezionato.textContent,
+            nomeUtenteSelezionato.textContent
         )
         
-        modificaUtente(oggettoUtenteModificato);
+        modificaUtente(oggettoCategoriaModificato);
         
         btn.classList.remove("fa-floppy-disk");
         btn.classList.add("fa-pen");
@@ -137,7 +115,7 @@ async function toggleEdit(btn) {
 }
 
 function confermaEliminazione() {
-    fetch(`http://localhost:8080/api/utenti/${utenteSelezionato}`, {
+    fetch(`http://localhost:8080/api/categoria/${utenteSelezionato}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
     }).then(() => location.reload())
@@ -146,62 +124,44 @@ function confermaEliminazione() {
 
 bottoneConfermaEliminazione.addEventListener("click", confermaEliminazione);
 
-class Utente {
-    constructor(nome, cognome, data, email, password, ruolo) {
+class Categoria {
+    constructor(nome) {
         this.nome = nome;
-        this.cognome = cognome;
-        this.data = data;
-        this.email = email;
-        this.password = password;
-        this.ruolo = ruolo;
+
     }
 }
 
-class UtentePUT {
-    constructor(id, nome, cognome, data, email, password, ruolo) {
+class categoriaPUT {
+    constructor(id, nome) {
         this.id = id;
         this.nome = nome;
-        this.cognome = cognome;
-        this.data = data;
-        this.email = email;
-        this.password = password;
-        this.ruolo = ruolo;
+
     }
 }
 
-const URL = "http://localhost:8080/api/utenti";
+const URL = "http://localhost:8080/api/categoria";
 function inserisciNuovoUtente() {
     event.preventDefault();
     
-    if (nome.value.trim() == "" ||
-    cognome.value.trim() == "" ||
-    data.value.trim() == "" ||
-    email.value.trim() == "" ||
-    password.value.trim() == "" ||
-    ruolo.value.trim() == "") {
+    if (nome.value.trim() == "") {
         errore.innerHTML = "Non hai inserito tutti i campi";
         
     } else {
-        const UtenteCreato = new Utente(
+        const CategoriaCreata = new Categoria(
         nome.value,
-        cognome.value,
-        data.value,
-        email.value,
-        password.value,
-        ruolo.value,
     );
     
     
     
     
     
-    fetch("http://localhost:8080/api/utenti", {
+    fetch("http://localhost:8080/api/categoria", {
         method: "POST",
         mode : "cors",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(UtenteCreato),
+        body: JSON.stringify(CategoriaCreata),
         
     }).then(location.reload())
     
@@ -222,7 +182,7 @@ function modificaUtente(oggettoUtenteModificato) {
             //         oggettoEventoModificato.categoria = categoria;
             //           console.log(JSON.stringify(oggettoEventoModificato));
             
-            fetch(`http://localhost:8080/api/utenti`, {
+            fetch(`http://localhost:8080/api/categoria`, {
                 method: "PUT",
                 mode : "cors",
                 headers: {
@@ -236,4 +196,4 @@ function modificaUtente(oggettoUtenteModificato) {
         // )};
 
 
-getAllUtenti();
+getAllCategorie();

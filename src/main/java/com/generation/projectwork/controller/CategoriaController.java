@@ -34,7 +34,7 @@ public class CategoriaController {
 	@Autowired
 	EventiService eventiService;
 
-	@GetMapping
+	@GetMapping("/tutteCategorie")
 	public List<CategorieEntity> getAllCategories(){
 		List<CategorieEntity> getAllCategorie = categoriaService.getAllCategories();
 		return getAllCategorie;
@@ -59,7 +59,7 @@ public class CategoriaController {
 //				return new ResponseEntity<EventiEntity>(new EventiEntity(), HttpStatus.NOT_FOUND);
 //	}
 	
-	@PostMapping("/nuovaCategoria")
+	@PostMapping
 	public ResponseEntity<?> AddOrUpdateCategoria(@RequestBody CategoriaDTO categoriaDTO) {
 		CategorieEntity categoria = categoriaDTO.toCategoria();
 		boolean esisteGia = categoriaService.findByNameExists(categoriaDTO.getNome());

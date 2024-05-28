@@ -1,6 +1,6 @@
 URL = "http://localhost:8080";
 const ENDPOINT_GET_ALL_EVENTS = `${URL}/api/eventi/tuttiGliEventi`;
-const ENDPOINT_GET_ALL_CATEGORIES = `${URL}/api/categoria`;
+const ENDPOINT_GET_ALL_CATEGORIES = `${URL}/api/categoria/tutteCategorie`;
 
 let arrayEventi = [];
 function caricaEvento(){

@@ -43,6 +43,7 @@ header.innerHTML = `
             Registrati
         </button>
     </nav>
+    <div class="dropdown" id="dashboardAdmin"></div>
 
     <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-mobile-btn fa-solid fa-user"></button>
 </div>
@@ -288,3 +289,7 @@ mobileSearchbar.innerHTML = `<div class="modal fade" id="mobileSearchbar" tabind
 `;
 
 }
+
+//   
+
+

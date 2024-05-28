@@ -69,3 +69,25 @@ tr .bottoni{
 h1{
     display: flex;
 }
+
+.btnNuovoUtente{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-end !important;
+    margin-bottom: 1rem;
+}
+
+.amici{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+   margin-bottom: 2rem;
+}
+
+.home{
+    border: none;
+    background-color: rgba(0, 128, 0, 0.562);
+    border: 2px solid black;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}

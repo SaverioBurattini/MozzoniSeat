@@ -1,1 +1,123 @@
 @import "_global.css";
+.container{
+    background-color: transparent !important;
+}
+
+.hero-section{
+    min-height: 1000px;
+   
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  div.row.prodotto{
+    align-items: center;
+    display: flex;
+    padding-right: 7rem;
+    
+    
+
+}
+
+.padre{
+    background-color: rgba(106, 67, 38, 0.336);
+    border-radius: 2rem;
+}
+
+nav {
+    padding: 0px !important;
+    /* margin-bottom: 4rem; */
+  }
+  
+  header{
+      margin-bottom: 2rem;
+    }
+    
+    .div-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+ 
+    
+    
+    input [type=number]{
+        width: 50px;
+    }
+    
+    input{
+        width: 30%;
+  }
+
+  .div-image{
+    justify-self: center;
+  }
+
+ 
+  
+  
+  .prodotto {
+      padding: 10px 0px;
+      border-bottom: 2px solid #3e4246;
+      border-top: 2px solid #3e4246;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      
+    }
+    
+    .immagine{
+        height: 10rem !important;
+        width: 15rem !important;
+    }
+  
+  .riepilogo {
+    margin-top: 8rem;
+    padding: 0px 40px;
+  }
+  
+  .rigaAlta {
+    border-bottom: 2px solid #3e4246;
+    
+  }
+  
+  
+  
+  .spazioAlto{
+    margin-top: 2rem;
+  }
+  
+  .bordino{
+    border-bottom: 2px solid #3e4246;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .btn {
+    width: 100px;
+  }
+  
+  .numeri{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .sinistra{
+    margin-left: 2rem;
+  }
+
+
+  
+  
+  @media screen and (min-width: 992px) {
+    .riepilogo {
+      margin-top: 0px;
+      margin-bottom: 0.5rem !important;
+    }
+  }

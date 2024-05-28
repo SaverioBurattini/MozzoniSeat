@@ -12,7 +12,7 @@ function caricaEvento(){
 
 let arrayCategorieEventi = [];
 function caricaCategorie(){
-    fetch("http://localhost:8080/api/categoria")
+    fetch("http://localhost:8080/api/categoria/tutteCategorie")
     .then(data=>{
         return data.json();
     }).then(categorie=>{

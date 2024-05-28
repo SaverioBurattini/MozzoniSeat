@@ -32,7 +32,7 @@ class Utente {
   }
 }
 
-
+let bottoneGestionale = document.getElementById("dashboardAdmin");
 function checkIfLoggedIn(){
   if(localStorage["utente"]){ 
     btnModalAccessoHeader.textContent = "Logout";
@@ -48,6 +48,15 @@ function checkIfLoggedIn(){
 
     headerSalutoNomeUtente.innerHTML = `Ciao, <a href="./utente.html" class="header-account-anchor">${JSON.parse(localStorage.getItem('utente')).nome}</a>`;
     // headerITuoiBiglietti.innerHTML = `<a>I tuoi biglietti</a>`;
+    if(JSON.parse(localStorage.getItem("utente")).ruolo == "RUOLO_ADMIN"){
+        bottoneGestionale.innerHTML = ` 
+        <button class="dropdown-button">Gestionale</button> 
+        <div class="dropdown-list"> 
+            <a href="gestionale-eventi.html">Gestionale Eventi</a> 
+            <a href="gestionale-utenti.html">Gestionale Utenti</a> 
+            <a href="gestione-categoria.html">Gestionale Categorie</a> 
+        </div>`
+    }
     }
   }
 
