@@ -24,7 +24,7 @@ import jakarta.transaction.Transactional;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/eventi")
+@RequestMapping("api/eventi")
 public class EventiController {
 
 	@Autowired
@@ -57,18 +57,18 @@ public class EventiController {
 		return getAllEventiFromCategory;
 	}
 	
-	@PostMapping("/admin/nuovoEvento")
+	@PostMapping()
 	public ResponseEntity<?> AddOrUpdateUser(@RequestBody EventoDTO evento) {
 		EventiEntity eventos = evento.toEvento();
-		boolean esisteGiaEvento = eventiService.findByNameExistsEventi(evento.getNome());
-		if(esisteGiaEvento) {
-			return new ResponseEntity<EventoDTO>(evento, HttpStatus.BAD_REQUEST);
-		}
+//		boolean esisteGiaEvento = eventiService.findByNameExistsEventi(evento.getNome());
+//		if(esisteGiaEvento) {
+//			return new ResponseEntity<EventoDTO>(evento, HttpStatus.BAD_REQUEST);
+//		}
 			EventiEntity eventoCreata = eventiService.addOrUpdateEvents(eventos);
 			return new ResponseEntity<EventiEntity>(eventoCreata, HttpStatus.OK);
 	}
 	
-	@DeleteMapping("/admin/{evento_id}")
+	@DeleteMapping("/{evento_id}")
 	@Transactional
 	public ResponseEntity<?> DeleteUser(@PathVariable("evento_id")int id) {
 		try {
@@ -86,18 +86,16 @@ public class EventiController {
 		
 	}
 	
-	@PutMapping("/admin")
-	public ResponseEntity<?> PutUser(@RequestBody EventoDTO evento){
-		if(evento.getId() <= 0) {
-			return new ResponseEntity<EventoDTO>(evento, HttpStatus.BAD_REQUEST);
-		}
-			EventiEntity eventos = evento.toEvento();
-			boolean esisteGia = eventiService.findByNameExistsEventi(evento.getNome());
-			if(esisteGia) {
-				return new ResponseEntity<EventoDTO>(evento, HttpStatus.BAD_REQUEST);
-			}
-				EventiEntity eventoCreato = eventiService.addOrUpdateEvents(eventos);
-				return new ResponseEntity<EventiEntity>(eventos, HttpStatus.OK);
-			
-		}
+	 @PutMapping
+	    public ResponseEntity<?> PutUser(@RequestBody EventoDTO evento){
+	        if(evento.getId() <= 0) {
+	            return new ResponseEntity<EventoDTO>(evento, HttpStatus.BAD_REQUEST);
+	        }
+	            EventiEntity eventos = evento.toEventoDtoEntity(evento);
+
+	                EventiEntity eventoCreato = eventiService.addOrUpdateEvents(eventos);
+	                return new ResponseEntity<EventiEntity>(eventoCreato, HttpStatus.OK);
+	            
+	        }
+
 }

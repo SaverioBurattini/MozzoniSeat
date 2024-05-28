@@ -98,6 +98,24 @@ public class EventiEntity {
 		
 		
 	}
+	
+	
+	
+	public EventiEntity(String nome, String locandina, String descrizione, String data, String localita,
+            String coordinate, double prezzoIntero, double prezzoRidotto) {
+        this.nome = nome;
+        this.locandina = locandina;
+        this.descrizione = descrizione;
+        this.data = data;
+        this.localita = localita;
+        this.coordinate = coordinate;
+        this.prezzoIntero = prezzoIntero;
+        this.prezzoRidotto = prezzoRidotto;
+    }
+	
+	
+	
+	
 
 	public int getId() {
 		return id;

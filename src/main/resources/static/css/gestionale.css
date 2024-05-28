@@ -1,0 +1,71 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
+@import "_header.css";
+
+.container{
+    background-color: rgba(128, 128, 128, 0.532);
+}
+
+.comandi{
+    width: 33%;
+}
+
+.liste{
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.bottoni{
+    margin-bottom: 1rem;
+    border: none;
+}
+
+tr .bottoni{
+    justify-content: space-between;
+}
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    height: 100%;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+
+.inputtiamo{
+    width: 20%;
+}
+
+.tabelle{
+    width: 100%;
+    text-justify: distribute;
+}
+
+h1{
+    display: flex;
+}

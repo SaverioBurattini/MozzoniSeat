@@ -1,6 +1,10 @@
+const URL = "http://localhost:8080";
+const ENDPOINT_GET_ALL_EVENTS = `${URL}/api/eventi/tuttiGliEventi`;
+const ENDPOINT_GET_ALL_CATEGORIES = `${URL}/api/categoria`;
+
 let arrayEventi = [];
 function caricaEvento(){
-    fetch("http://localhost:8080/api/eventi/tuttiGliEventi")
+    fetch(`${ENDPOINT_GET_ALL_EVENTS}`)
     .then(data =>{
         return data.json();
     }).then(eventi =>{
@@ -12,7 +16,7 @@ function caricaEvento(){
 
 let arrayCategorieEventi = [];
 function caricaCategorie(){
-    fetch("http://localhost:8080/api/categoria")
+    fetch(`${ENDPOINT_GET_ALL_CATEGORIES}`)
     .then(data=>{
         return data.json();
     }).then(categorie=>{

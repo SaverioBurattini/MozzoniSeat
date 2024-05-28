@@ -56,6 +56,26 @@ public class EventoDTO {
 				this.getPrezzoRidotto(),
 				new CategorieEntity(this.getCategoria().getId(),this.getCategoria().getNome()));
 	}
+	
+    public EventiEntity toEventoDtoEntity(EventoDTO evento) {
+    	CategorieEntity catEntity = new CategorieEntity();
+    	catEntity.setNome(evento.getCategoria().getNome());
+    	catEntity.setId(evento.getCategoria().getId());
+    	
+        EventiEntity dto = new EventiEntity();
+                dto.setId(evento.getId());
+                dto.setNome(evento.getNome());
+                dto.setLocandina(evento.getLocandina());
+                dto.setDescrizione(evento.getDescrizione());
+                dto.setData(evento.getData());
+                dto.setLocalita(evento.getLocalita());
+                dto.setCoordinate(evento.getCoordinate());
+                dto.setPrezzoIntero(evento.getPrezzoIntero());
+                dto.setPrezzoRidotto(evento.getPrezzoRidotto());
+                dto.setCategoria(catEntity);
+        return dto;
+        
+    }
 
 	
 	public EventoDTO toEventoDto(EventiEntity evento) {

@@ -50,58 +50,50 @@ function checkIfLoggedIn(){
 function registrati() {
   event.preventDefault();
   
-  if (nome.value.trim() != "" &&
-      cognome.value.trim() != "" &&
-      dataNascita.value.trim() != "" &&
-      email.value.trim() != "" &&
-      password.value.trim() != "" &&
-      confermaPassword.value.trim() != "") {
-
-    if(password.value != confermaPassword.value) {
-      signupFeedback.textContent = "Le due password inserite devono coincidere";
-
-    } else {
-      if(checkboxPolicy.checked) {
-
-      const UtenteCreato = new Utente(
-        nome.value,
-        cognome.value,
-        data.value,
-        email.value,
-        password.value
-      );
-      
-      fetch(`${ENDPOINT_NUOVO_UTENTE}`, {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(UtenteCreato),
-      })
-      .then((response) => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok " + response.statusText);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log("Success:", data);
-        })
-        .catch((error) => {
-          console.error("There was a problem with the fetch operation:", error);
-        });
-
-        window.localStorage.setItem("utente", JSON.stringify(UtenteCreato));
-        location.reload();
-      } else {
+  if (nome.value.trim() == "" ||
+      cognome.value.trim() == "" ||
+      dataNascita.value.trim() == "" ||
+      email.value.trim() == "" ||
+      password.value.trim() == "" ||
+      confermaPassword.value.trim() == "") {
+        signupFeedback.textContent = "Compila tutti i campi";
+      } else if (password.value != confermaPassword.value) {
+        signupFeedback.textContent = "Le due password inserite devono coincidere";
+      } else if (!checkboxPolicy.checked) {
         signupFeedback.textContent = "Per continuare devi accettare i Termini di servizio";
+      } else {
+        const UtenteCreato = new Utente(
+          nome.value,
+          cognome.value,
+          data.value,
+          email.value,
+          password.value
+        );
+        
+        fetch(`${ENDPOINT_NUOVO_UTENTE}`, {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(UtenteCreato),
+        })
+        .then((response) => {
+          if (!response.ok) {
+              throw new Error("Network response was not ok " + response.statusText);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log("Success:", data);
+          })
+          .catch((error) => {
+            console.error("There was a problem with the fetch operation:", error);
+          });
+  
+          window.localStorage.setItem("utente", JSON.stringify(UtenteCreato));
+          location.reload();
       }
-    }
-  } else {
-    signupFeedback.textContent = "Compila tutti i campi";
-  }
-    
 }
 
 
@@ -109,28 +101,25 @@ function registrati() {
 function login(){
   event.preventDefault();
 
-  if(emailLogin.value.trim() != "" && passwordLogin.value.trim() != "") {
-    try {
-      fetch(`${ENDPOINT_CERCA_UTENTE_BY_EMAIL_PASSWORD}/${emailLogin.value}/${passwordLogin.value}`)
-      .then(data =>{
-        return data.json();
-      }).then(utente =>{
-        if(JSON.stringify(utente) == "null") {
-          signinFeedback.textContent = ("Utente non trovato o password errata");
-        } else {
-          console.log(JSON.stringify(utente));
-          window.localStorage.setItem("utente", JSON.stringify(utente));
-          location.reload();
-        }
-      })
-    } catch {
-      console.log("Errore fatale nella ricerca dell'utente");
-    }
-
-  } else {
+  if(emailLogin.value.trim() == "" || passwordLogin.value.trim() == "") {
     signinFeedback.textContent = "Compila tutti i campi";
-  }
-  
+  } else {
+      try {
+        fetch(`${ENDPOINT_CERCA_UTENTE_BY_EMAIL_PASSWORD}/${emailLogin.value}/${passwordLogin.value}`)
+        .then(data =>{
+          return data.json();
+        }).then(utente =>{
+          if(JSON.stringify(utente) == "null") {
+            signinFeedback.textContent = ("Utente non trovato o password errata");
+          } else {
+            window.localStorage.setItem("utente", JSON.stringify(utente));
+            location.reload();
+          }
+        })
+      } catch {
+        console.log("Errore fatale nella ricerca dell'utente");
+      }
+    }
 }
 
 function logout(){
