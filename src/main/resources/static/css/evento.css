@@ -1,19 +1,58 @@
-@import "_global.css";
-@import "_searchbar-header.css";
+@import url(_global.css);
+@import url(_searchbar-header.css);
+@import url(_mappa.css);
 
-.info-evento {
-    display: flex;
-    align-items: center;
-    padding: 3rem;
-    transform: scale();
+.event-thumbnail{
+    text-align: center;
+    transform: translateY(-130px);
+    position: relative;
+    z-index: 2;
 }
 
-.info-evento h2 {
-    font-weight: 700;
+.event-thumbnail img {
+    border-radius: 1rem;
 }
 
-.info-evento .data-evento {
+.event-thumbnail h2 {
+    margin-top: 1.5rem;
+}
+
+.hero-section {
+    background-position: center;
+    margin-bottom: 0;
+    min-height: 40vh;
+}
+.hero-section .overlay{
+    backdrop-filter: blur(4px);
+}
+
+.div-dettagli-evento{
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.div-event-detail-section {
+    display: flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.div-event-detail-section * {
+    margin: 0;
+}
+
+.div-event-detail-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* mobile (cellulare e tablet) */
+@media screen and (max-width:991px) {
+    
+.zona-mappa img{
+    
+}
+    
 }

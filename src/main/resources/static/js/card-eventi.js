@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080";
+URL = "http://localhost:8080";
 const ENDPOINT_GET_ALL_EVENTS = `${URL}/api/eventi/tuttiGliEventi`;
 const ENDPOINT_GET_ALL_CATEGORIES = `${URL}/api/categoria`;
 

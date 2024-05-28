@@ -3,8 +3,14 @@
 @import "_card-eventi.css";
 
 .hero-section {
+    background-image: url('../img/hero/about/hero-about.jpg');
     background-position: center;
     
     -webkit-box-shadow: inset 0px 0px 50px 10px #000000; 
     box-shadow: inset 0px 0px 50px 10px #000000;
+}
+
+
+.hero-text {
+    mix-blend-mode: difference;
 }

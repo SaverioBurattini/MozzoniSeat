@@ -1,11 +1,11 @@
 let header = document.querySelector('header');
 
 header.innerHTML = `
-<div class="nav-div-icons">
+<div class="nav-div-icons logo-group">
     <button id="btn-apri-chiudi-menu-categorie" class="nav-mobile-btn fa-solid fa-bars"></button>
     <a href="./index.html"><img src="./img/logo-intero.png" alt="Logo" class="logo unselectable"></a>
     <a href="./index.html"><img src="./img/logo-ridotto.png" alt="Logo" class="logo-ridotto"></a>
-    <nav class="navbar gap-3 d-flex align-items-center">
+    <nav class="navbar gap-3 d-flex align-items-center nav-left">
 
     <!-- Searchbar -->
     <div class="searchbar-header input-group ">
@@ -13,6 +13,10 @@ header.innerHTML = `
         <input type="text" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-default" placeholder="Cerca evento">
     </div>
     <!-- Searchbar -->
+
+        <a href="about.html">
+            <li class="about-li"><b>Chi siamo</b></li>
+        </a>
 
         <a href="categorie.html#Sport">
             <li>Sport</li>
@@ -26,21 +30,20 @@ header.innerHTML = `
     </nav>
 </div>
 <div class="nav-div-icons nav-div-icons-left">
-
+<div id="headerSalutoNomeUtente"></div>
+<div id="headerITuoiBiglietti"></div>
 <div class="div-btn-searchbar">
     <button data-bs-toggle="modal" data-bs-target="#mobileSearchbar" class="nav-mobile-btn fa-solid fa-magnifying-glass"></button>
 </div>
 
     <nav class="navbar gap-3 d-flex align-items-center">
-        <a href="about.html">
-            <li>Chi siamo</li>
-        </a>
         <!-- Button trigger modal -->
         <button type="button" class="btn-modal-accesso-header unselectable" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
             Registrati
         </button>
     </nav>
+
     <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-mobile-btn fa-solid fa-user"></button>
 </div>
 `;

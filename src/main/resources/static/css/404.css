@@ -1,0 +1,11 @@
+@import url(_global.css);
+
+.div-img-not-found{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.div-img-not-found img {
+    width: 50%;
+}

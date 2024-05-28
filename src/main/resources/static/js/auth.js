@@ -20,6 +20,8 @@ let bottoneRegistrati = document.querySelector(".btn-registrati");
 let bottoneLogin = document.querySelector(".btn-login");
 let bottoneLogout = document.querySelector(".btnLogout");
 
+let headerSalutoNomeUtente = document.getElementById('headerSalutoNomeUtente');
+
 class Utente {
   constructor(nome, cognome, data, email, password) {
     this.nome = nome;
@@ -43,6 +45,9 @@ function checkIfLoggedIn(){
     headerUserIcon.setAttribute('data-bs-target','')
     headerUserIcon.setAttribute('data-bs-toggle','')
     headerUserIcon.addEventListener('click',logout)
+
+    headerSalutoNomeUtente.innerHTML = `Ciao, <a href="./utente.html" class="header-account-anchor">${JSON.parse(localStorage.getItem('utente')).nome}</a>`;
+    // headerITuoiBiglietti.innerHTML = `<a>I tuoi biglietti</a>`;
     }
   }
 

@@ -1,0 +1,49 @@
+@import url(_global.css);
+@import url(_searchbar-header.css);
+
+
+
+.dati{
+    flex-direction: column;
+}
+
+.container-card{
+margin-left: 5rem;
+}
+
+.info-utente{
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.info-utente img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.div-userpropic {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card{
+    background-color: #c04739d5;
+}
+.card li{
+    background-color: #c04739d5;
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .div-userpropic {
+        justify-content: flex-start;
+    }
+    
+}

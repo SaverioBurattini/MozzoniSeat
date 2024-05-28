@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitoloEvento | MozzoniSeat</title>
+
+    <link rel="shortcut icon" href="./img/logo-ridotto.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/evento.css">
+</head>
+
+
+
+<body data-bs-theme="dark">
+
+        <!-- <div class="col-md-10 col-lg-10 w-100"> -->
+
+            <!-- ----------------------------- Hero cover ------------------------------ -->
+            <div class="hero-section unselectable" style="background-image: url(./img/posters/avengers-endgame.webp);">
+                <div class="overlay"></div>
+                <header></header> <!-- (Component) -->
+            </div>
+            
+            <div class="event-thumbnail">
+                <img src="./img/posters/avengers-endgame.webp" alt="">
+                <h2>Nome evento</h2>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    <div class="div-dettagli-evento mb-5 mt-5 w-50 d-flex gap-3">
+
+        <div class="div-event-detail-section">
+            <div class="div-event-detail-section-title"><i class="fa-solid fa-info"></i><h5>Info</h5></div>
+            <p id="infoEvento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minima.</p>
+        </div>
+
+        <div class="div-event-detail-section">
+            <div class="div-event-detail-section-title"><i class="fa-solid fa-map-marker"></i><h5>Luogo</h5></div>
+            <p id="luogoEvento">Chieti, CH (Italia)</p>
+        </div>
+        
+        <div class="div-event-detail-section">
+            <div class="div-event-detail-section-title"><i class="fa-solid fa-calendar"></i><h5>Data</h5></div>
+            <p id="dataEvento">29/05/2024</p>
+        </div>
+
+        <div class="div-event-detail-section">
+            <div class="div-event-detail-section-title"><i class="fa-solid fa-clock"></i><h5>Orario</h5></div>
+            <p id="orarioEvento">20:00</p>
+        </div>
+        
+    </div>
+
+
+    <div class="div-biglietti">
+        <div class="div-biglietto-prezzo-intero">
+            <h5>Biglietto prezzo intero</h5>
+            
+            <div class="div-acquista-biglietto">
+                <button class="fa-solid fa-plus"></button>
+                <input type="number" value="3">
+                <button class="fa-solid fa-minus"></button>
+                <button>Acquista</button>
+            </div>
+        </div>
+
+        <div class="div-biglietto-prezzo-ridotto">
+            <h5>Biglietto prezzo ridotto</h5>
+
+            <div class="div-acquista-biglietto">
+                <button class="fa-solid fa-plus"></button>
+                <input type="number" value="3">
+                <button class="fa-solid fa-minus"></button>
+                <button>Acquista</button>
+            </div>
+        </div>
+    </div>
+
+    <iframe width="500" height="300" src="https://api.maptiler.com/maps/streets/?key=B4gRiv5GELTnle0J2Oe1#14.0/40.70850/-74.00603"></iframe>
+</div>
+
+
+
+
+    <div class="modal fade" id="mobileSerchbar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Grazie per aver acquistato!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <a href="">Vai ai tuoi biglietti</a> <!-- TODO Da modificare -->
+            </div>
+        </div>
+    </div>
+    
+    <footer></footer> <!-- (Component) -->
+
+    <div id="mobile-navbar"></div> <!-- (Component) -->
+    <div id="sign-in-up-modal"></div> <!-- (Component) -->
+    <div id="search-modal"></div> <!-- (Component) -->
+
+
+
+
+
+    
+    <script src="./js/carrello.js"></script>
+    
+    <!-- ----------------------------- Components ------------------------------ -->
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <script src="./js/auth.js"></script>
+
+    <!-- ------------------------------ Bootstrap ------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- ------------------------------ NProgress ------------------------------ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="./js/NProgress-init.js"></script>
