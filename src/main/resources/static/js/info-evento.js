@@ -79,7 +79,7 @@ function init() {
     luogoEvento.innerHTML = `<a style="color:white;" href="https://www.google.it/maps/search/${eventoSelezionato.localita}" target="_blank">${eventoSelezionato.localita}</a>`;
     dataEvento.textContent = eventoSelezionato.data.split(' ')[0].replaceAll('-','/');
     orarioEvento.textContent = eventoSelezionato.data.slice(0, -3).replaceAll('-','/').split(' ')[1];
-    iframeMap.src = `https://api.maptiler.com/maps/streets/?key=B4gRiv5GELTnle0J2Oe1#14.0/${eventoSelezionato.coordinate.split(',')[1]}/${eventoSelezionato.coordinate.split(',')[0].replace(',','')}`;
+    iframeMap.src = `https://api.maptiler.com/maps/streets/?key=B4gRiv5GELTnle0J2Oe1#11.53/42.3363/14.1581`;
 
     inputQuantitaBigliettiIntero.addEventListener('input', handleInputChange);
     inputQuantitaBigliettiRidotto.addEventListener('input', handleInputChange);
