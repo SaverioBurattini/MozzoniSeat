@@ -51,6 +51,8 @@ public class UtenteDTO {
 		this.password = password;
 		this.ruolo = ruolo;
 	}
+
+
 	
 	public UtenteEntity toPersonas() {
 		return new UtenteEntity( 
