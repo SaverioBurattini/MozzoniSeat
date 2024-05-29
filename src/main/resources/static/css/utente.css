@@ -2,6 +2,16 @@
 @import url(_searchbar-header.css);
 
 
+.row-user-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.row-user-details * {
+    margin: 0;
+}
 
 .dati{
     flex-direction: column;
@@ -38,6 +48,48 @@ margin-left: 5rem;
     background-color: #c04739d5;
 
 }
+
+
+
+
+.biglietto{
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    position: relative;
+    transform: translateX(-75px);
+    margin-bottom: 5rem;
+}
+
+.biglietto img{
+    z-index: 1;
+    position: absolute; 
+    width: 800px;
+    height: auto;
+}
+
+.dati-biglietto {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15rem;
+    margin-top: 2.5rem;
+}
+.dati-biglietto h3 {
+    z-index: 10;
+}
+
+.div-container-biglietti {
+    display: flex;
+    flex-direction: column;
+}
+
+#immagine{
+    transform: scale(0.6) translateY(-30px) translateX(750px);
+    height: 300px;
+    width: 400px;
+}
+
+
 
 
 

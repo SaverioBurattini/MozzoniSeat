@@ -24,6 +24,9 @@
     --accent: #C04739;
     --transparent-btn: rgba(255, 255, 255, 0.12);
 
+    --btn-hover: #7e0e02;
+    --btn-active: #6d0d02;
+
 
     --hero-lg: url('../img/hero/homepage/hero-lg.webp');
     --hero-md: url('../img/hero/homepage/hero-md.webp');

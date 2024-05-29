@@ -2,9 +2,13 @@
 @import url(_searchbar-header.css);
 @import url(_mappa.css);
 
+body {
+    overflow-x: hidden;
+}
 .event-thumbnail{
     text-align: center;
-    transform: translateY(-130px);
+    margin-top: -8rem;
+    margin-bottom: 5rem;
     position: relative;
     z-index: 2;
 }
@@ -30,12 +34,14 @@
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .div-event-detail-section {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .div-event-detail-section * {
@@ -48,11 +54,69 @@
     gap: 0.8rem;
 }
 
-/* mobile (cellulare e tablet) */
-@media screen and (max-width:991px) {
-    
-.zona-mappa img{
-    
+.container {
+    padding: 0 !important;
 }
-    
+
+.div-biglietti {
+    margin-top: 5rem;
+}
+
+.div-biglietto button {
+    border-radius: 50%;
+    background-color: var(--primary);
+    border: none;
+    transition: all 0.2s ease-in-out;
+} .div-biglietto button:hover {
+    background-color: var(--btn-hover);
+}.div-biglietto button:active {
+    background-color: var(--btn-active);
+}
+
+.div-biglietto h5 {
+    font-size: 1.7rem;
+}
+
+.div-biglietto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-acquista-biglietto .fa-solid {
+    width: 32px;
+    height: 32px;
+}
+
+.div-acquista-biglietto input {
+    width: 50px;
+}
+
+.btn-finalize-purchase {
+    margin-top: 2rem;
+    padding: 16px;
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    border-radius: 3rem;
+    transition: all 0.2s ease-in-out;
+} .btn-finalize-purchase:hover {
+    background-color: var(--btn-hover);
+} .btn-finalize-purchase:active {
+    background-color: var(--btn-active);
+}
+
+
+@media (max-width: 767px) {
+    .container .row {
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 560px) {
+    .event-thumbnail img {
+        width: 70%;
+        height: auto;
+    }
 }

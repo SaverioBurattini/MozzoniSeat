@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>utente</title>
+    <title>Il tuo profilo | MozzoniSeat</title>
 
     <link rel="shortcut icon" href="./img/logo-ridotto.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/utente.css">
@@ -27,13 +27,16 @@
                 <div class="row">
                     <div class="col-md-4 order-md-last div-userpropic"> <img class="img-fluid" src="img/userpropic.webp" alt=""></div>
                     <div class="col-md-8 order-md-first">
-                        <h3>Nome e cognome</h3>
-                        <p class="nome mb-2">Mattia ferrusi</p>
-                        <h3>Data di nascita</h3>
+                        <div class="row-user-details"><i class="fa-solid fa-user"></i><h3>Nome e cognome</h3></div>
+                        <p class="nome mb-2">Mattia Ferrusi</p>
+
+                        <div class="row-user-details"><i class="fa-solid fa-cake"></i><h3>Data di nascita</h3></div>
                         <p class="dataNascita mb-2">20/12/1981</p>
-                        <div class="d-flex gap-2"><h3>Email</h3><p style="font-size: small; align-self: baseline;"><a href="" style="text-decoration: none; color:var(--text-color)">Modifica</a></p></div>
+
+                        <div class="row-user-details"><i class="fa-solid fa-envelope"></i><div class="d-flex gap-2"><h3>Email</h3><p style="font-size: small; align-self: baseline;"><a href="" style="text-decoration: none; color:var(--text-color)">Modifica</a></p></div></div>
                         <p class="email mb-2">email@gmail.com</p>
-                        <div class="d-flex gap-2"><h3>Password</h3><p style="font-size: small; align-self: baseline;"><a href="" style="text-decoration: none; color:var(--text-color)">Modifica</a></p></div>
+
+                        <div class="row-user-details"><i class="fa-solid fa-key"></i><div class="d-flex gap-2"><h3>Password</h3><p style="font-size: small; align-self: baseline;"><a href="" style="text-decoration: none; color:var(--text-color)">Modifica</a></p></div></div>
                         <p class="password mb-2">********</p>
                     </div>
                 </div>
@@ -44,42 +47,42 @@
 
             <hr>
 
-            <h2>Storico Biglietti</h2>
+            <h2>Storico biglietti</h2>
             <div class="container-card d-flex">
-                <div class="row mb-5 mt-5 gap-5">
-                    <div class="card" style="width: 18rem;">
-                        <img src="Img/posters/ariana-grande.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">pesa 40kg bagnata</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Biglietto ridotto</li>
-                            <li class="list-group-item">Immagine del biglietto</li>
-                            <li class="list-group-item">data biglietto:17/12/2024</li>
-                        </ul>
-                        <div class="card-body">
-                           
-                        </div>
+                
+
+
+                <div class="div-container-biglietti">
+
+                    <div class="biglietto">
+                        <img src="Img/1.webp" alt="">
+                            <div class="dati-biglietto">
+                                <h3>nome concerto</h3>
+                                <h3>data concerto</h3>
+                                <h3>località</h3>
+                                <h3>prezzo</h3>
+                            </div>
+                        <img id="immagine" src="Img/posters/ariana-grande.png" alt="">
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                        <div class="card-body">
-                           
-                        </div>
+
+                    <div class="biglietto">
+                        <img src="Img/2.webp" alt="">
+                            <div class="dati-biglietto">
+                                <h3>nome concerto</h3>
+                                <h3>data concerto</h3>
+                                <h3>località</h3>
+                                <h3>prezzo</h3>
+                            </div>
+                        <img id="immagine" src="Img/posters/ariana-grande.png" alt="">
                     </div>
+
+
                 </div>
+
+
+
+
+            </div>
 
 
 
@@ -122,6 +125,8 @@
         crossorigin="anonymous"></script>
 
     <script src="./js/auth.js"></script>
+
+    <script src="./js/utente.js"></script>
 
     <!-- ------------------------------ NProgress ------------------------------ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>

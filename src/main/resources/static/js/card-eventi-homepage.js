@@ -77,6 +77,7 @@ function creaSwiper() {
             swiperSlide.appendChild(cardEvento);
             swiperWrapper.appendChild(swiperSlide);
         });
+        aggiungiEventListenerBtnEventi();
 
     var swiperInitCategorie = new Swiper(".swiper-categorie", {
         slidesPerView: 3,
@@ -118,6 +119,16 @@ function creaSwiper() {
                 spaceBetween: 20
             }
         },
+    });
+}
+
+function aggiungiEventListenerBtnEventi() {
+    let allbtnaddtocart = document.querySelectorAll('.btn-add-to-cart');
+
+    [...allbtnaddtocart].forEach(btn => {
+        btn.addEventListener('click', function(){aggiungiAlCarrello(btn.getAttribute('data-id-evento'));setTimeout(function(){
+            location.href = "evento.html";
+        }, 100)});
     });
 }
 

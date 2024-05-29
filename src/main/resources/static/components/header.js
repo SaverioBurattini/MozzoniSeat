@@ -31,7 +31,6 @@ header.innerHTML = `
 </div>
 <div class="nav-div-icons nav-div-icons-left">
 <div id="headerSalutoNomeUtente"></div>
-<div id="headerITuoiBiglietti"></div>
 <div class="div-btn-searchbar">
     <button data-bs-toggle="modal" data-bs-target="#mobileSearchbar" class="nav-mobile-btn fa-solid fa-magnifying-glass"></button>
 </div>
@@ -43,9 +42,9 @@ header.innerHTML = `
             Registrati
         </button>
     </nav>
-    <div class="dropdown" id="dashboardAdmin"></div>
-
+    
     <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-mobile-btn fa-solid fa-user"></button>
+    <div class="dropdown" id="dashboardAdmin"></div>
 </div>
 `;
 
@@ -289,7 +288,3 @@ mobileSearchbar.innerHTML = `<div class="modal fade" id="mobileSearchbar" tabind
 `;
 
 }
-
-//   
-
-

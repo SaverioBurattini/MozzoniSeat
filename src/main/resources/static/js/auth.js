@@ -1,5 +1,5 @@
 const URL = "http://localhost:8080";
-const ENDPOINT_NUOVO_UTENTE = `${URL}/api/utenti/nuovoUtente`;
+const ENDPOINT_NUOVO_UTENTE = `${URL}/api/utenti`;
 const ENDPOINT_CERCA_UTENTE_BY_EMAIL_PASSWORD = `${URL}/api/utenti`;
 
 

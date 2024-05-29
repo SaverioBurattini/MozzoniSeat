@@ -120,7 +120,9 @@ function aggiungiEventListenerBtnEventi() {
     let allbtnaddtocart = document.querySelectorAll('.btn-add-to-cart');
 
     [...allbtnaddtocart].forEach(btn => {
-        btn.addEventListener('click', function(){aggiungiAlCarrello(btn.getAttribute('data-id-evento'))});
+        btn.addEventListener('click', function(){aggiungiAlCarrello(btn.getAttribute('data-id-evento'));setTimeout(function(){
+            location.href = "evento.html";
+        }, 100)});
     });
 }
 

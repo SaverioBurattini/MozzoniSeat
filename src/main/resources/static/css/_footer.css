@@ -7,7 +7,7 @@ footer {
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 5rem 0 2rem 0;
+    padding: 10rem 0 2rem 0;
     bottom: 0px;
     max-width: 100%;
     text-align: center;
@@ -28,7 +28,23 @@ footer .logo {
     padding: var(--bs-modal-padding);
 }
 
-.logo-ridotto{
-    display: none;
+.footer-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-icone-social-network {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.footer-icone-social-network .fa-brands{
+    transform: scale(1.5);
     
+}
+
+.footer-icone-social-network a{
+    color: rgba(255, 255, 255, 0.671);
 }
