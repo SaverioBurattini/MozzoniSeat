@@ -116,7 +116,7 @@ function riepilogoOrdine(){
         <p>TOTALE (IVA incl.)</p>
         <p>${(sommaIntero * totaleBigliettiInteri) + (sommaRidotto * totaleBigliettiRidotti)}€</p>
       </div>
-      <button type="button" class="mb-3 btn-acquista" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="mb-3 btn-acquista" data-bs-toggle="modal" data-bs-target="#modal-pagamento">
         Compra
       </button>`
 
@@ -124,3 +124,27 @@ function riepilogoOrdine(){
     }
 
     riepilogoOrdine();
+
+    let bigliettiAcquistati =[];
+
+    class Pagamento {
+        constructor(evento, bigliettiRidotto, bigliettiIntero) {
+            this.evento = evento;
+            this.bigliettiRidotto = bigliettiRidotto;
+            this.bigliettiIntero = bigliettiIntero;
+        }
+    }
+    let bottonePaga = document.getElementById('bottonePaga');
+    bottonePaga.addEventListener('click',creaPagamento);
+    function creaPagamento() {
+    const pagamento = new Pagamento(JSON.parse(localStorage.getItem('eventoSelezionato')), localStorage.getItem('bigliettiRidotto'), localStorage.getItem('bigliettiIntero'))
+
+        bigliettiAcquistati.push(pagamento);
+        localStorage.setItem('bigliettiAcquistati',JSON.stringify(bigliettiAcquistati));
+    }
+
+    function fetchBigliettiAcquistati(){
+        localStorage.getItem('bigliettiAcquistati') ? bigliettiAcquistati=JSON.parse(localStorage.getItem('bigliettiAcquistati')) : bigliettiAcquistati=[]
+    }
+    
+    fetchBigliettiAcquistati()
