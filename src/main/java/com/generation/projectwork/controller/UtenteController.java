@@ -26,7 +26,7 @@ import jakarta.transaction.Transactional;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("api/utenti")
+@RequestMapping("/api/utenti")
 public class UtenteController {
 
 	@Autowired
@@ -129,10 +129,7 @@ public class UtenteController {
 			return new ResponseEntity<UtenteDTO>(utente, HttpStatus.BAD_REQUEST);
 		}
 			UtenteEntity persona = utente.toPersonaDto(utente);
-			// boolean esisteGia = utenteService.findByEmailAndPassExists(persona.getEmail(), persona.getPassword());
-			// if(esisteGia) {
-			// 	return new ResponseEntity<UtenteDTO>(utente, HttpStatus.BAD_REQUEST);
-			// }
+			
 				UtenteEntity utenteCreato = utenteService.addOrUpdate(persona);
 				return new ResponseEntity<UtenteEntity>(utenteCreato, HttpStatus.OK);
 			

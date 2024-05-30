@@ -94,10 +94,10 @@ public class CategoriaController {
 			return new ResponseEntity<CategoriaDTO>(categoria, HttpStatus.BAD_REQUEST);
 		}
 			CategorieEntity categorias = categoria.toPersonaDto(categoria);
-			boolean esisteGia = categoriaService.findByNameExists(categorias.getNome());
-			if(esisteGia) {
-				return new ResponseEntity<CategoriaDTO>(categoria, HttpStatus.BAD_REQUEST);
-			}
+			// boolean esisteGia = categoriaService.findByNameExists(categorias.getNome());
+			// if(esisteGia) {
+			// 	return new ResponseEntity<CategoriaDTO>(categoria, HttpStatus.BAD_REQUEST);
+			// }
 				CategorieEntity categoriaCreata = categoriaService.addOrUpdateCategories(categorias);
 				return new ResponseEntity<CategorieEntity>(categoriaCreata, HttpStatus.OK);
 			

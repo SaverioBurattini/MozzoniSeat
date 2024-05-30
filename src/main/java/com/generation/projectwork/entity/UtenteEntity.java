@@ -2,6 +2,8 @@ package com.generation.projectwork.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +26,7 @@ public class UtenteEntity {
 	private String password;
 	private String ruolo;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "utente")
 	List<BigliettiEntity> bigliettiPerUtente;
 	

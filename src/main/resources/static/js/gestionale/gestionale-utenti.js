@@ -31,6 +31,7 @@ async function getAllUtenti() {
     }
 }
 
+getAllUtenti();
 
 function tuttiGliUtenti() {
     let fragment = document.createDocumentFragment();
@@ -118,7 +119,7 @@ async function toggleEdit(btn) {
         btnApriModalEliminazioneSingoloUtente.style.color = "white";
         
         
-        
+           
     } else {
         
         campiForm.forEach(campo => {
@@ -159,7 +160,7 @@ class Utente {
 
 class UtentePUT {
     constructor(id, nome, cognome, data, email, password, ruolo) {
-        this.id = id;
+        this.utente_id = id;
         this.nome = nome;
         this.cognome = cognome;
         this.data = data;
@@ -235,5 +236,3 @@ function modificaUtente(oggettoUtenteModificato) {
         
         // )};
 
-
-getAllUtenti();
