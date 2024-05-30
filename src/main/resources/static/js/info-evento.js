@@ -67,6 +67,8 @@ function init() {
     let quantitaBigliettiInteriIniziale = 1;
     let quantitaBigliettiRidottiIniziale = 0;
 
+    window.top.document.title = `${eventoSelezionato.nome} | MozzoniSeat`;
+
     localStorage.setItem('bigliettiIntero', quantitaBigliettiInteriIniziale);
     localStorage.setItem('bigliettiRidotto', quantitaBigliettiRidottiIniziale);
     inputQuantitaBigliettiIntero.value = quantitaBigliettiInteriIniziale;
